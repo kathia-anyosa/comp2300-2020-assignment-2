@@ -20,7 +20,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
-  bl silence1
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
@@ -32,7 +32,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
-  bl silence1
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
@@ -44,7 +44,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
-  bl silence1
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
@@ -56,7 +56,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
-  bl silence1
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
@@ -68,14 +68,14 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
-  bl silence1
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
   bl pitch4
-  @no silence, straight to pitch3
+  
 
   movs r4, 0x8000
   mov r0, r4
@@ -87,7 +87,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #24000
-  bl silence2
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
@@ -99,7 +99,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
-  bl silence1
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
@@ -111,7 +111,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
-  bl silence1
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
@@ -123,7 +123,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
-  bl silence1
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
@@ -135,7 +135,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #12000
-  bl silence1
+  bl silence
 
   movs r4, 0x8000
   mov r0, r4
@@ -147,7 +147,7 @@ synth:
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   mov r5, #36000
-  bl silence3
+  bl silence
 
   b synth
 
@@ -192,31 +192,13 @@ pitch4: @generates pitch of 415.30 Hz
   bne pitch4
   beq return
 
-silence1: @generates silence of length 0.25s
+silence: @generates silence of length 0.25s
   push {lr}
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
   subs r5, #1 
   pop {lr}
-  bne silence1
-  beq return
-
-silence2: @generates silence of length 0.5s
-  push {lr}
-  mov r0, r4
-  bl BSP_AUDIO_OUT_Play_Sample
-  subs r5, #1 
-  pop {lr}
-  bne silence2
-  beq return
-
-silence3: @generates silence of length 0.75s
-  push {lr}
-  mov r0, r4
-  bl BSP_AUDIO_OUT_Play_Sample
-  subs r5, #1 
-  pop {lr}
-  bne silence3
+  bne silence
   beq return
 
 return:
