@@ -9,7 +9,7 @@ main:
   bl init @turn  on headphone jack
   bl BSP_AUDIO_Buffer @work around delay between bl init and bl BSP_AUDIO_OUT_Play_Sample
 
-synth:
+sequencer:
   movs r4, 0x8000 @set minimum value of 0x8000 in r4
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample @produce sound
@@ -310,7 +310,7 @@ synth:
   mov r5, #24000
   bl silence
 
-  b synth
+  b sequencer
 
 
 pitch1: @generates C note
