@@ -19,7 +19,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -31,7 +31,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -43,7 +43,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -55,7 +55,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -67,7 +67,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -79,7 +79,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -91,7 +91,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -103,7 +103,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -115,7 +115,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -127,7 +127,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -139,7 +139,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -151,7 +151,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -163,7 +163,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -175,7 +175,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -187,7 +187,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -199,7 +199,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -211,7 +211,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -223,7 +223,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -235,7 +235,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -247,7 +247,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -259,7 +259,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -271,7 +271,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -283,7 +283,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -295,7 +295,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   movs r4, 0x8000
@@ -307,7 +307,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #24000
   bl silence
 
   b synth
