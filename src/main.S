@@ -9,7 +9,7 @@ main:
   bl init @turn  on headphone jack
   @bl BSP_AUDIO_Buffer @work around delay between bl init and bl BSP_AUDIO_OUT_Play_Sample
 
-synth:
+sequencer:
   movs r4, 0x8000 @set minimum value of 0x8000 in r4
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample @produce sound
@@ -220,7 +220,7 @@ synth:
   mov r5, #36000 @set counter to 36000 steps (0.75 seconds)
   bl silence
 
-  b synth
+  b sequencer
 
 @pitch1_up & pitch1_down generate pitch of 293.66 Hz
 pitch1_up: @generates increasing half of the waveform
