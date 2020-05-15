@@ -184,7 +184,7 @@ pitch3: @generates pitch of 392 Hz
 
 pitch4: @generates pitch of 415.30 Hz
   push {lr}
-  add r4, #565
+  add r4, #564
   mov r0, r4 
   bl BSP_AUDIO_OUT_Play_Sample
   subs r5, #1
