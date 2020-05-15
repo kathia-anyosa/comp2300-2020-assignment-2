@@ -443,7 +443,7 @@ pitch13: @generates middle C
   bne pitch13
   beq return
 
-silence: @generates silence of length 0.25s
+silence: @generates silence of length 0.5s
   push {lr}
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
