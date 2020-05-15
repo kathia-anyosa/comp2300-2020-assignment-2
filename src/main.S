@@ -19,13 +19,13 @@ synth:
   movs r4, 0x8000 @set minimum value of 0x8000 in r4
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample @produce sound
-  mov r5, #6000 @set counter to 6000 steps (0.125 seconds)
+  mov r5, #6000
   bl pitch1_down
 
   movs r4, 0 @set 0 in r4, as no sound will be produced during silence
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  mov r5, #12000 @set counter to 12000 steps (0.25 seconds)
   bl silence
 
   movs r4, 0x8000
@@ -49,7 +49,7 @@ synth:
   movs r4, 0x8000
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000 @set counter to 12000 steps (0.25 seconds)
+  mov r5, #12000 
   bl pitch3_up
 
   movs r4, 0x8000
@@ -127,7 +127,7 @@ synth:
   movs r4, 0
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #24000
+  mov r5, #24000 @set counter to 24000 steps (0.5 seconds)
   bl silence
 
   movs r4, 0x8000
@@ -205,7 +205,7 @@ synth:
   movs r4, 0x8000
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #24000 @set counter to 24000 steps (0.5 seconds)
+  mov r5, #24000 
   bl pitch1_up
 
   movs r4, 0x8000
@@ -223,7 +223,7 @@ synth:
   b synth
 
 @pitch1_up & pitch1_down generate pitch of 293.66 Hz
-pitch1_up: 
+pitch1_up: @generates increasing half of the waveform
   push {lr} @push address onto stack
   add r4, #799
   mov r0, r4 
@@ -233,7 +233,7 @@ pitch1_up:
   bne pitch1_up @loop pitch1 if the counter hasn't reached zero
   beq return @end loop once counter reaches zero
 
-pitch1_down: 
+pitch1_down: @generates decreasing half of the waveform
   push {lr} 
   sub r4, #799
   mov r0, r4 
