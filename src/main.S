@@ -3,7 +3,7 @@
 
 .type main, %function
 
-@COMP2300 Assignment 2 Part 2 - Produce a chromatic scale
+@COMP2300 Assignment 2 Part 2 - Produce a chromatic scaless
 
 main:
   bl init @turn  on headphone jack
