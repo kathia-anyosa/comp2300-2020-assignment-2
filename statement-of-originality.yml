@@ -23,10 +23,10 @@ declaration: >-
 
 # add as many "url+licence+comment" entries as necessary
 # (or remove it altogether if you haven't used any external assets)
-#assets:
-#  - comment:
-#    url:
-#    licence:
+assets:
+  - comment: Frequencies used are a modified version of those on this website
+    url: https://www.scalesandmodes.com/Major_Scales/Major_Scales/Chromatic_Scale_Definition.html
+    licence: N/A
 
 
 # sign *your* name and uid here
