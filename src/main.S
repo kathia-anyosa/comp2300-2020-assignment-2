@@ -7,7 +7,7 @@
 
 main:
   bl init @turn  on headphone jack
-  bl BSP_AUDIO_Buffer @work around delay between bl init and bl BSP_AUDIO_OUT_Play_Sample
+  @bl BSP_AUDIO_Buffer @work around delay between bl init and bl BSP_AUDIO_OUT_Play_Sample
 
 synth:
   movs r4, 0x8000 @set minimum value of 0x8000 in r4
