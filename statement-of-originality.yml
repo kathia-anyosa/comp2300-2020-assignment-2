@@ -24,8 +24,8 @@ declaration: >-
 # add as many "url+licence+comment" entries as necessary
 # (or remove it altogether if you haven't used any external assets)
 #assets:
-#  - comment:
-#    url:
+#  - comment: 
+#    url: 
 #    licence:
 
 
