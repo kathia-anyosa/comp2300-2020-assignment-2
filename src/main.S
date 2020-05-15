@@ -6,20 +6,20 @@
 @COMP2300 Assignment 2 Part 2 - Produce a chromatic scale
 
 main:
-  bl init
-  bl BSP_AUDIO_Buffer
+  bl init @turn  on headphone jack
+  bl BSP_AUDIO_Buffer @work around delay between bl init and bl BSP_AUDIO_OUT_Play_Sample
 
 synth:
-  movs r4, 0x8000
+  movs r4, 0x8000 @set minimum value of 0x8000 in r4
   mov r0, r4
-  bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #12000
+  bl BSP_AUDIO_OUT_Play_Sample @produce sound
+  mov r5, #12000 @set counter to 12000 steps (0.25 seconds)
   bl pitch1
 
-  movs r4, 0
+  movs r4, 0 @set 0 in r4, as no sound will be produced during silence
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
-  mov r5, #24000
+  mov r5, #24000 @set counter to 24000 steps (0.5 seconds)
   bl silence
 
   movs r4, 0x8000
@@ -313,17 +313,17 @@ synth:
   b synth
 
 
-pitch1: @generates C
-  push {lr}
+pitch1: @generates C note
+  push {lr} @push address onto stack
   adds r4, #358
   mov r0, r4 
   bl BSP_AUDIO_OUT_Play_Sample
   subs r5, #1
-  pop {lr}
-  bne pitch1
-  beq return 
+  pop {lr} @pops address from stack 
+  bne pitch1 @loop pitch1 if the counter hasn't reached zero
+  beq return @end loop once counter reaches zero
 
-pitch2: @generates C#/Db
+pitch2: @generates C#/Db notes
   push {lr}
   adds r4, #378
   mov r0, r4 
@@ -333,7 +333,7 @@ pitch2: @generates C#/Db
   bne pitch2
   beq return
 
-pitch3: @generates D
+pitch3: @generates D note
   push {lr}
   add r4, #402
   mov r0, r4 
@@ -343,7 +343,7 @@ pitch3: @generates D
   bne pitch3
   beq return
 
-pitch4: @generates D#/Eb
+pitch4: @generates D#/Eb notes
   push {lr}
   add r4, #425
   mov r0, r4 
@@ -353,7 +353,7 @@ pitch4: @generates D#/Eb
   bne pitch4
   beq return
 
-pitch5: @generates E
+pitch5: @generates E note
   push {lr}
   add r4, #448
   mov r0, r4 
@@ -363,7 +363,7 @@ pitch5: @generates E
   bne pitch5
   beq return
 
-pitch6: @generates F
+pitch6: @generates F note
   push {lr}
   add r4, #478
   mov r0, r4 
@@ -373,7 +373,7 @@ pitch6: @generates F
   bne pitch6
   beq return
 
-pitch7: @generates F#/Gb
+pitch7: @generates F#/Gb notes
   push {lr}
   add r4, #504
   mov r0, r4 
@@ -383,7 +383,7 @@ pitch7: @generates F#/Gb
   bne pitch7
   beq return
 
-pitch8: @generates G
+pitch8: @generates G note
   push {lr}
   add r4, #537
   mov r0, r4 
@@ -393,7 +393,7 @@ pitch8: @generates G
   bne pitch8
   beq return
 
-pitch9: @generates G#/Ab
+pitch9: @generates G#/Ab notes
   push {lr}
   add r4, #564
   mov r0, r4 
@@ -403,7 +403,7 @@ pitch9: @generates G#/Ab
   bne pitch9
   beq return
 
-pitch10: @generates A
+pitch10: @generates A note
   push {lr}
   add r4, #601
   mov r0, r4 
@@ -413,7 +413,7 @@ pitch10: @generates A
   bne pitch10
   beq return
 
-pitch11: @generates A#/Bb
+pitch11: @generates A#/Bb notes
   push {lr}
   add r4, #636
   mov r0, r4 
@@ -423,7 +423,7 @@ pitch11: @generates A#/Bb
   bne pitch11
   beq return
 
-pitch12: @generates B
+pitch12: @generates B note
   push {lr}
   add r4, #675
   mov r0, r4 
@@ -433,7 +433,7 @@ pitch12: @generates B
   bne pitch12
   beq return
 
-pitch13: @generates middle C
+pitch13: @generates middle C note
   push {lr}
   add r4, #712
   mov r0, r4 
@@ -443,7 +443,7 @@ pitch13: @generates middle C
   bne pitch13
   beq return
 
-silence: @generates silence of length 0.5s
+silence: @generates silence
   push {lr}
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
@@ -452,7 +452,7 @@ silence: @generates silence of length 0.5s
   bne silence
   beq return
 
-return:
+return: @return to address
   bx lr
 
   nop
