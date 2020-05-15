@@ -192,7 +192,7 @@ pitch4: @generates pitch of 415.30 Hz
   bne pitch4
   beq return
 
-silence: @generates silence of length 0.25s
+silence: @generates silence
   push {lr}
   mov r0, r4
   bl BSP_AUDIO_OUT_Play_Sample
